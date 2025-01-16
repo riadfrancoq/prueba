@@ -1,7 +1,6 @@
 <template>
     <div>
         <div class="prueba " >
-
         </div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -32,7 +31,8 @@
                 <a class="nav-link disabled text-white" aria-disabled="true">Disabled</a>
               </li>
             </ul>
-          </div>
+        </div>
+        <button type="button" class="m-2 btn btn-dark">salir</button>
         </div>
       </nav>
   
@@ -80,6 +80,13 @@ export default {
       }
     };
 
+    
+    const logout = () => {
+    localStorage.clear(); // Borra todo el localStorage
+    console.log("LocalStorage eliminado");
+    
+    };
+
     onMounted(fetchProducts);
 
     return {
@@ -94,10 +101,10 @@ export default {
 
 .navbar {
   background-image: url('../assets/fondopagina.jpg');
-  background-size: cover; /* Asegura que la imagen cubra el área */
-  background-position: 50% 20%; /* Mueve la imagen, 50% horizontal y 20% vertical */
+  background-size: cover; 
+  background-position: 50% 20%;
   background-repeat: no-repeat;
-  height: 15rem; /* Ajusta la altura de la barra */
+  height: 15rem;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
