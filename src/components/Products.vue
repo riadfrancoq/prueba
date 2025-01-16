@@ -4,33 +4,8 @@
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           FRANQUIZ
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse text-white" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled text-white" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-          </div>
+          <img v-if="picture" :src="picture" alt="Foto de Perfil ">
+
           <button type="button" class="m-2 btn btn-dark" @click="logout">
             Salir
           </button>
@@ -62,6 +37,11 @@
   
   export default {
     name: "Products",
+    data() {
+      return {
+        picture: localStorage.getItem('picture') || null
+      }
+    },
     setup() {
       const products = ref([]);
       const loading = ref(true);
