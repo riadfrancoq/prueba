@@ -1,10 +1,13 @@
 <template>
     <div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="prueba " >
+
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">FRANQUIZ</a>
+            <a class="navbar-brand text-white" href="#">FRANQUIZ</a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler "
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -14,26 +17,26 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+          <div class="collapse navbar-collapse text-white" id="navbarNav">
+            <ul class="navbar-nav ">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link text-white" href="#">Features</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link text-white" href="#">Pricing</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <li class="nav-item ">
+                <a class="nav-link disabled text-white" aria-disabled="true">Disabled</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
   
-      <h3>Lista de Productos</h3>
+      <h3 class="m-5">Lista de Productos</h3>
       <div v-if="loading">Cargando productos...</div>
       <div v-else class="container mt-3">
         <div class="row">
@@ -88,6 +91,20 @@ export default {
 </script>
 
 <style>
+
+.navbar {
+  background-image: url('../assets/fondopagina.jpg');
+  background-size: cover; /* Asegura que la imagen cubra el área */
+  background-position: 50% 20%; /* Mueve la imagen, 50% horizontal y 20% vertical */
+  background-repeat: no-repeat;
+  height: 15rem; /* Ajusta la altura de la barra */
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: white;
+}
+
 .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
